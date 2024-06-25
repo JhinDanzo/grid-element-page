@@ -137,4 +137,24 @@ main{
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width:1200px){
+    body{
+        display: flex;
+        justify-content: center;
+        width: 98vw;
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 255px);
+        grid-template-rows: 3;
+    }
+
+    .card-horizontal{
+        grid-column: 1 / span 3;
+        grid-row: 3;
+    }
+}
