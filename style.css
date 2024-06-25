@@ -1,0 +1,140 @@
+:root{
+    --skyblue: #ECF2F8;
+    --granite: #48556A;
+    --purple: #733FC8;
+    --violet: #A775F1;
+    --white: #ECF2F8;
+    --black: #19202D;
+    --lightgrey: #CFCFCF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Barlow Semi Condensed, serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--skyblue);
+    padding: 164px 165px 164px 165px;
+    width: 98vw;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 255px);
+    grid-template-rows: 282px 266px;
+    gap:30px;
+}
+
+.card{
+    border-radius: 8px;
+    color: var(--white);
+    padding: 26px 32px 32px 32px;
+}
+
+.card-bigger-first{
+    grid-column: 1 / span 2;
+    background-color: var(--purple);
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: right 80px top;
+}
+
+.card-bigger-second{
+    grid-column: 2 / span 2;
+    background-color: var(--black);
+}
+
+.card-smaller-first{
+    grid-column: 3;
+    background-color: var(--granite);
+}
+
+.card-smaller-second{
+    grid-column: 1;
+    background-color: white;
+    color: var(--granite);
+}
+
+.card-horizontal{
+    background-color: white;
+    color: var(--granite);
+    grid-column: 4;
+    grid-row: 1/ span 2;
+}
+
+.person-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.avatar{
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.name{
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 4px;
+}
+
+.status{
+    font-size: 11px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.status-darker{
+    --granite: rgba(72, 85, 106, 0.5);
+    color: var(--granite);
+}
+
+.short-summary{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.story{
+    --lightgrey: rgba(207,207,207,0.7);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--lightgrey);
+}
+
+.story-darker{
+    --granite: rgba(72, 85, 106, 0.7);
+    color: var(--granite);
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        display: flex;
+        justify-content: center;
+        width: 98vw;
+        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card{
+        width: 327px;
+    }
+
+    .card-bigger-first{
+        background-position: right 24px top;
+    }
+}
+
+
